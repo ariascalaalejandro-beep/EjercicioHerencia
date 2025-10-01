@@ -2,7 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.parqueadero;
+package Presentacion;
+
+import Logica.Automovil;
+import Logica.Motocicleta;
+import Logica.Bicicleta;
+
 import java.time.LocalDateTime;
 /**
  *
@@ -11,6 +16,7 @@ import java.time.LocalDateTime;
 public class Parqueadero {
 
     public static void main(String[] args) {
+         
         System.out.println("--- PARQUEADERO UNIVERSITARIO ---");
 
         Automovil auto = new Automovil("ABC123", "Toyota", "Corolla", 4,
@@ -23,10 +29,10 @@ public class Parqueadero {
         System.out.println("Vehiculo: Motocicleta | Placa: " + moto.getPlaca() +
                 " | Horas: " + moto.getHorasParqueo() + " | Total: $" + moto.calcularCosto());
 
-        Bicicleta bici = new Bicicleta("Montana", true,
+        Bicicleta bici = new Bicicleta("Montaña", true,
                 LocalDateTime.now().minusHours(4), LocalDateTime.now());
         System.out.println("Vehiculo: Bicicleta | Tipo: " + bici.getTipo() +
                 " | Horas: " + bici.getHorasParqueo() + " | Total: $" + bici.calcularCosto());
+    
     }
-    }
-
+}

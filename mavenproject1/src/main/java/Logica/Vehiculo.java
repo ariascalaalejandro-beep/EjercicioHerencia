@@ -2,16 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.parqueadero;
-import java.time.LocalDateTime;
+package Logica;
+
 import java.time.Duration;
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Drakyc AlarkaSG
  */
+
 public abstract class Vehiculo {
-    private LocalDateTime horaEntrada;
-    private LocalDateTime horaSalida;
+    protected LocalDateTime horaEntrada;
+    protected LocalDateTime horaSalida;
 
     public Vehiculo(LocalDateTime horaEntrada, LocalDateTime horaSalida) {
         this.horaEntrada = horaEntrada;
@@ -23,12 +26,4 @@ public abstract class Vehiculo {
     }
 
     public abstract double calcularCosto();
-
-    public LocalDateTime getHoraEntrada() {
-        return horaEntrada;
-    }
-
-    public LocalDateTime getHoraSalida() {
-        return horaSalida;
-    }
 }
